@@ -1,8 +1,17 @@
 <resources>
 
     <string name="app_name">Coordinate Conversion</string>
-    <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
     <string name="title_activity_main">Coordinate Conversion</string>
+    <string name="lattitudeOptions">N/S</string>
+    <string name="longitudeOptions">E/W</string>
+    <string name="degrees">DD</string>
+    <string name="minutes">MM</string>
+    <string name="seconds">SS.nnn</string>
+    <string name="decimalMinutes">MM.nnnnn</string>
+    <string name="decimalDegrees">DD.nnnnnn</string>
+    <string name="degreeToken">º</string>
+    <string name="minuteToken">\'</string>
+    <string name="secondsToken">\&quot;</string>
 
 </resources>
