@@ -3,8 +3,8 @@
     <string name="app_name">Coordinate Conversion</string>
     <string name="menu_settings">Settings</string>
     <string name="title_activity_main">Coordinate Conversion</string>
-    <string name="lattitudeOptions">N/S</string>
-    <string name="longitudeOptions">E/W</string>
+    <string name="lattitude">N/S</string>
+    <string name="longitude">E/W</string>
     <string name="degrees">DD</string>
     <string name="minutes">MM</string>
     <string name="seconds">SS.nnn</string>
