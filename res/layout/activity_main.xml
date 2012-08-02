@@ -1,105 +1,45 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="top" >
+    android:gravity="top"
+    android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/lblMinuteToken1"
+    <nl.endofdullart.coordinate_conversion.view.DecDegCoordinateTextEdit
+        android:id="@+id/decDegCoordinateLatitude"
         android:layout_width="wrap_content"
-        android:layout_height="32dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:text="@string/minuteToken" />
-
-    <EditText
-        android:id="@+id/txtNSDMDecimalMinutes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_toLeftOf="@+id/lblMinuteToken1"
-        android:ems="8"
-        android:hint="@string/decimalMinutes"
-        android:inputType="numberDecimal" />
-
-    <TextView
-        android:id="@+id/lblDegreeToken1"
-        android:layout_width="wrap_content"
-        android:layout_height="32dp"
-        android:layout_alignParentTop="true"
-        android:layout_toLeftOf="@+id/txtNSDMDecimalMinutes"
-        android:text="@string/degreeToken" />
-
-    <EditText
-        android:id="@+id/txtNSDMDegrees"
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_toLeftOf="@+id/lblDegreeToken1"
-        android:ems="8"
-        android:hint="@string/degrees"
-        android:inputType="number" />
-
-    <TextView
-        android:id="@+id/lblNS1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/txtNSDMDegrees"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:gravity="center_vertical"
-        android:text="@string/lattitudeOptions" />
-
-    <TextView
-        android:id="@+id/lblEW1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/lblNS1"
-        android:layout_marginTop="20dp"
-        android:text="@string/longitudeOptions" />
-
-    <EditText
-        android:id="@+id/txtEWDMDegrees"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/lblEW1"
-        android:layout_alignBottom="@+id/lblEW1"
-        android:layout_alignLeft="@+id/txtNSDMDegrees"
-        android:layout_alignRight="@+id/txtNSDMDegrees"
-        android:ems="10"
-        android:hint="@string/degrees" >
+        android:layout_height="wrap_content" >
 
         <requestFocus />
-    </EditText>
+    </nl.endofdullart.coordinate_conversion.view.DecDegCoordinateTextEdit>
 
-    <TextView
-        android:id="@+id/lblDegreeToken2"
+    <nl.endofdullart.coordinate_conversion.view.DecDegCoordinateTextEdit
+        android:id="@+id/decDegCoordinateLongitude"
         android:layout_width="wrap_content"
-        android:layout_height="32dp"
-        android:layout_alignBaseline="@+id/txtEWDMDegrees"
-        android:layout_alignLeft="@+id/lblDegreeToken1"
-        android:layout_alignTop="@+id/txtEWDMDegrees"
-        android:text="@string/degreeToken" />
+        android:layout_height="wrap_content" />
 
-    <EditText
-        android:id="@+id/txtEWDMDecimalMinutes"
+    <nl.endofdullart.coordinate_conversion.view.MinDecCoordinateTextEdit
+        android:id="@+id/minDecCoordinateLatitude"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/lblDegreeToken2"
-        android:layout_alignLeft="@+id/txtNSDMDecimalMinutes"
-        android:layout_alignRight="@+id/txtNSDMDecimalMinutes"
-        android:layout_alignTop="@+id/lblDegreeToken2"
-        android:ems="10"
-        android:hint="@string/decimalMinutes" />
+        android:layout_height="wrap_content" >
+    </nl.endofdullart.coordinate_conversion.view.MinDecCoordinateTextEdit>
 
-    <TextView
-        android:id="@+id/lblMinuteToken2"
+    <nl.endofdullart.coordinate_conversion.view.MinDecCoordinateTextEdit
+        android:id="@+id/minDecCoordinateLongitude"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/txtEWDMDecimalMinutes"
-        android:layout_alignBottom="@+id/txtEWDMDecimalMinutes"
-        android:layout_alignParentRight="true"
-        android:text="@string/minuteToken" />
+        android:layout_height="wrap_content" >
+    </nl.endofdullart.coordinate_conversion.view.MinDecCoordinateTextEdit>
 
-</RelativeLayout>
+    <nl.endofdullart.coordinate_conversion.view.DMSCoordinateTextEdit
+        android:id="@+id/dMSCoordinateTextLatitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+    </nl.endofdullart.coordinate_conversion.view.DMSCoordinateTextEdit>
+
+    <nl.endofdullart.coordinate_conversion.view.DMSCoordinateTextEdit
+        android:id="@+id/dMSCoordinateLongitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+    </nl.endofdullart.coordinate_conversion.view.DMSCoordinateTextEdit>
+
+</LinearLayout>
