@@ -1,7 +1,6 @@
 package nl.endofdullart.coordinate_conversion.view;
 
 import nl.endofdullart.coordinate_conversion.R;
-import nl.endofdullart.coordinate_conversion.model.CoordinateDirection;
 import nl.endofdullart.coordinate_conversion.model.DecDegCoordinate;
 import android.content.Context;
 import android.util.AttributeSet;
@@ -16,6 +15,7 @@ public class DecDegCoordinateTextEdit extends LinearLayout {
 	private static final String T = DecDegCoordinateTextEdit.class
 			.getSimpleName();
 	private EditText editDegrees;
+	private Character latLong;
 
 	public DecDegCoordinateTextEdit(Context context) {
 		super(context);
@@ -45,12 +45,16 @@ public class DecDegCoordinateTextEdit extends LinearLayout {
 		}
 	}
 
-	public void setCoordDirection(CoordinateDirection coordinateDirection) {
+	public Character getLatLong() {
+		return latLong;
+	}
+
+	public void setLatLong(Character latLongText) {
+		this.latLong = latLongText;
+
 		TextView txtLatLong = (TextView) findViewById(R.id.textLatLong);
-		txtLatLong.setText(coordinateDirection.toString());
-		Log.v(T,
-				String.format("Direction set to ",
-						coordinateDirection.toString()));
+		txtLatLong.setText(latLong);
+		Log.v(T, String.format("Direction set to ", latLong));
 	}
 
 	@Override

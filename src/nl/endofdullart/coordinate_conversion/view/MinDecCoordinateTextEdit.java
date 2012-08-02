@@ -16,6 +16,7 @@ public class MinDecCoordinateTextEdit extends LinearLayout {
 			.getSimpleName();
 	private EditText editDegrees;
 	private EditText editMinutes;
+	private Character latLong;
 
 	public MinDecCoordinateTextEdit(Context context) {
 		super(context);
@@ -46,10 +47,16 @@ public class MinDecCoordinateTextEdit extends LinearLayout {
 		}
 	}
 
-	public void setCoordDirection(String latLongText) {
+	public Character getLatLong() {
+		return latLong;
+	}
+
+	public void setLatLong(Character latLongText) {
+		this.latLong = latLongText;
+
 		TextView txtLatLong = (TextView) findViewById(R.id.textLatLong);
-		txtLatLong.setText(latLongText);
-		Log.v(T, String.format("Direction set to ", latLongText));
+		txtLatLong.setText(latLong);
+		Log.v(T, String.format("Direction set to ", latLong));
 	}
 
 	@Override
