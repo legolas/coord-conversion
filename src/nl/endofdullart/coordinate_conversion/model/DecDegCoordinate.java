@@ -25,6 +25,6 @@ public class DecDegCoordinate {
 
 	@Override
 	public String toString() {
-		return String.format("%d", getDegrees());
+		return String.format("%f", getDegrees());
 	}
 }

@@ -2,7 +2,7 @@ package nl.endofdullart.coordinate_conversion.model;
 
 /**
  * The {@link DMSCoordinate} class represents a coordinate formatted with the
- * Decimal Degrees format: {@code N 12.345678 E 009.87654}
+ * Degrees Minutes Seconds format: {@code N 12 34 56.78 E 009 87 65.43}
  * 
  * @author MD80469
  * 
@@ -30,7 +30,7 @@ public class DMSCoordinate {
 
 	public double getRawCoordinate() {
 		// Add the minutes to the seconds
-		double minutesAndSeconds = seconds + 60 * minutes;
+		double minutesAndSeconds = getSeconds() + 60 * getMinutes();
 
 		// Add the total seconds as a fraction to the degrees and return the
 		// result
@@ -46,11 +46,12 @@ public class DMSCoordinate {
 	}
 
 	public double getSeconds() {
-		return seconds;
+		return (double) Math.round(seconds * 100) / 100;
 	}
 
 	@Override
 	public String toString() {
-		return String.format("%d %d %f", getRawCoordinate());
+		return String.format("%d %d %.2f", getDegrees(), getMinutes(),
+				getSeconds());
 	}
 }

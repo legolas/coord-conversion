@@ -2,7 +2,7 @@ package nl.endofdullart.coordinate_conversion.model;
 
 /**
  * The {@link MinDecCoordinate} class represents a coordinate formatted with the
- * Decimal Degrees format: {@code N 12.345678 E 009.87654}
+ * MinDec Degrees format: {@code N 12 34.678 E 009 87.654}
  * 
  * @author MD80469
  * 
@@ -21,7 +21,8 @@ public class MinDecCoordinate {
 		degrees = (int) coord;
 		double fractal = coord % 1;
 		coord = fractal * 60;
-		minutes = (int) coord;
+		// Only 3 digits
+		minutes = coord;
 	}
 
 	public double getRawCoordinate() {
@@ -35,11 +36,11 @@ public class MinDecCoordinate {
 	}
 
 	public double getMinutes() {
-		return minutes;
+		return (double) Math.round(minutes * 1000) / 1000;
 	}
 
 	@Override
 	public String toString() {
-		return String.format("%d %f", getDegrees(), getMinutes());
+		return String.format("%d %.3f", getDegrees(), getMinutes());
 	}
 }
