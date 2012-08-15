@@ -13,5 +13,6 @@
     <string name="degreeToken">º</string>
     <string name="minuteToken">\'</string>
     <string name="secondsToken">\&quot;</string>
+    <string name="exceededMaximum">Value too high.\nIt must be less than %1$d.</string>
 
 </resources>
