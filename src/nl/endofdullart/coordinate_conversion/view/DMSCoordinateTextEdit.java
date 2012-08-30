@@ -66,6 +66,15 @@ public class DMSCoordinateTextEdit extends LinearLayout {
 		editDegrees.setOnKeyListener(listener);
 	}
 
+	public void setCoordinate(DMSCoordinate coordinate) {
+		Log.v(T, "setCoordinate");
+		editDegrees
+				.setText(Integer.valueOf(coordinate.getDegrees()).toString());
+		editMinutes
+				.setText(Integer.valueOf(coordinate.getMinutes()).toString());
+		editSeconds.setText(Double.valueOf(coordinate.getSeconds()).toString());
+	}
+
 	public DMSCoordinate getCoordinate() {
 		Log.v(T, "getCoordinate");
 		String degreesText = editDegrees.getText().toString();

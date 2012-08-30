@@ -31,13 +31,13 @@
     </nl.endofdullart.coordinate_conversion.view.MinDecCoordinateTextEdit>
 
     <nl.endofdullart.coordinate_conversion.view.DMSCoordinateTextEdit
-        android:id="@+id/dMSCoordinateTextLatitude"
+        android:id="@+id/dmsCoordinateLatitude"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
     </nl.endofdullart.coordinate_conversion.view.DMSCoordinateTextEdit>
 
     <nl.endofdullart.coordinate_conversion.view.DMSCoordinateTextEdit
-        android:id="@+id/dMSCoordinateLongitude"
+        android:id="@+id/dmsCoordinateLongitude"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
     </nl.endofdullart.coordinate_conversion.view.DMSCoordinateTextEdit>

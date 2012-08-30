@@ -63,10 +63,15 @@ public class DecDegCoordinateTextEdit extends LinearLayout {
 		editDegrees.setOnKeyListener(listener);
 	}
 
+	public void setCoordinate(DecDegCoordinate coordinate) {
+		Log.v(T, "setCoordinate");
+		editDegrees.setText(Double.valueOf(coordinate.getDegrees()).toString());
+	}
+
 	public DecDegCoordinate getCoordinate() {
 		Log.v(T, "getCoordinate");
 		String coordText = editDegrees.getText().toString();
-		Log.v(T, String.format("EditText contains %s."));
+		Log.v(T, String.format("EditText contains %s.", coordText));
 		Double rawCoord = Double.parseDouble(coordText);
 
 		return new DecDegCoordinate(rawCoord);

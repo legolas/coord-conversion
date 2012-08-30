@@ -65,6 +65,13 @@ public class MinDecCoordinateTextEdit extends LinearLayout {
 		editDegrees.setOnKeyListener(listener);
 	}
 
+	public void setCoordinate(MinDecCoordinate coordinate) {
+		Log.v(T, "setCoordinate");
+		editDegrees
+				.setText(Integer.valueOf(coordinate.getDegrees()).toString());
+		editMinutes.setText(Double.valueOf(coordinate.getMinutes()).toString());
+	}
+
 	public MinDecCoordinate getCoordinate() {
 		Log.v(T, "getCoordinate");
 		String degreesText = editDegrees.getText().toString();
